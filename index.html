@@ -8,10 +8,11 @@
 </head>
 <body>
   <div id="container">
-    <button onclick="mostrarAlerta()" >Saludar</button>
+    <button onclick="mostrarAlerta(event)" >Saludar</button>
   </div>
   <script>
-    function mostrarAlerta(){
+    function mostrarAlerta(event){
+      event.stopPropagation()
       alert("Hola!")
     }
     </script>
